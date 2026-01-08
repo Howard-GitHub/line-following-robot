@@ -17,6 +17,17 @@
                 <cylinder radius="0.06" length="0.05" />
             </geometry>
         </collision>
+        <inertial>
+            <mass value="0.00396" />
+            <inertia
+                ixx="0.000004389"
+                ixy="0.0"
+                ixz="0.0"
+                iyy="0.000004389"
+                iyz="0.0"
+                izz="0.000007128"
+            />
+        </inertial>
     </link>
     
     <joint name="left_wheel_joint" type="fixed" >
@@ -37,6 +48,17 @@
                 <cylinder radius="0.06" length="0.05" />
             </geometry>
         </collision>
+        <inertial>
+            <mass value="0.00396" />
+            <inertia
+                ixx="0.000004389"
+                ixy="0.0"
+                ixz="0.0"
+                iyy="0.000004389"
+                iyz="0.0"
+                izz="0.000007128"
+            />
+        </inertial>
     </link>
 
     <joint name="right_wheel_joint" type="fixed" >
