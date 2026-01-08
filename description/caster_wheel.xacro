@@ -17,6 +17,17 @@
                 <sphere radius="0.06" />
             </geometry>
         </collision>
+        <inertial>
+            <mass value="0.00594" />
+            <inertia
+                ixx="0.0000085536"
+                ixy="0.0"
+                ixz="0.0"
+                iyy="0.0000085536"
+                iyz="0.0"
+                izz="0.0000085536"
+            />
+        </inertial>
     </link>
 
     <joint name="caster_wheel_joint" type="fixed">
