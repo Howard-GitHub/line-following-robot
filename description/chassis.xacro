@@ -9,6 +9,11 @@
                 <box size="0.45 0.3 0.17" />
             </geometry>
         </visual>
+        <collision> 
+            <geometry>
+                <box size="0.45 0.3 0.17" />
+            </geometry>
+        </collision>
     </link>
     
     <joint name="chassis_joint" type="fixed" >
