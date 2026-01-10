@@ -7,9 +7,11 @@ from launch import LaunchDescription
 
 def generate_launch_description():
 
+    # Access and store xacro file
     xacro_file_path = os.path.join(get_package_share_directory('line_following_robot'), 'description', 'robot.xacro')
     processed_xacro_file = xacro.process_file(xacro_file_path)
 
+    # Iniitiaze node to start robot_state_publisher
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
