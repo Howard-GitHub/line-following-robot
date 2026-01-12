@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
     <xacro:include filename="chassis.xacro" />
-    <xacro:include filename="wheels.xacro" />
+    <xacro:include filename="back_wheels.xacro" />
     <xacro:include filename="caster_wheel.xacro" />
 </robot>
