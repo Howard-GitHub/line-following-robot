@@ -28,8 +28,20 @@ def generate_launch_description():
         output='screen'
     )
 
+    bridge_file = os.path.join(get_package_share_directory('line_following_robot'), 'config', 'bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_file}'
+        ]
+    )
+
     return LaunchDescription([
         robot_state_publisher,
         gazebo,
-        spawn_vehicle
+        spawn_vehicle,
+        ros_gz_bridge
     ])

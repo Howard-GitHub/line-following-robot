@@ -66,7 +66,43 @@
         <parent link="base_link" />
         <child link="right_wheel_link" />
         <origin xyz="-0.1125 -0.15 -0.085" rpy="${pi/2} 0 0" /> 
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
     </joint>
+
+    <gazebo>
+        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
+            <!-- Sets the left and right wheel joints -->
+            <left_joint>left_wheel_joint</left_joint>
+            <right_joint>right_wheel_joint</right_joint>
+
+            <!-- Sets specific wheel measurements -->
+            <wheel_separation>0.225</wheel_separation>
+            <wheel_radius>0.06</wheel_radius>
+
+            <max_linear_acceleration>0.4</max_linear_acceleration>
+
+            <!-- Sets the topic that provides information about the behavior of the wheels -->
+            <topic>cmd_vel</topic>
+
+            <!-- Sets the origin point -->
+            <frame_id>odom</frame_id>
+
+            <!-- Sets the link that is relative to the origin -->
+            <child_frame_id>base_link</child_frame_id>
+
+            <!-- Sets publishing information for odom -->
+            <odom_topic>odom</odom_topic>
+            <odom_publisher_frequency>30</odom_publisher_frequency>
+
+            <!-- Sets the topic to publish to for transforms -->
+            <tf_topic>tf</tf_topic>
+        </plugin>
+
+        <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+            <topic>joint_states</topic>
+            <joint_name>left_wheel_joint</joint_name>
+            <joint_name>right_wheel_joint</joint_name>
+        </plugin>
+    </gazebo>
 
 </robot>
