@@ -3,4 +3,5 @@
     <xacro:include filename="chassis.xacro" />
     <xacro:include filename="back_wheels.xacro" />
     <xacro:include filename="caster_wheel.xacro" />
+    <xacro:include filename="camera.xacro" />
 </robot>
