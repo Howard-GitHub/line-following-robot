@@ -13,8 +13,10 @@ def generate_launch_description():
     )
 
     # Initialize launch description that starts up gazebo 
+    world = os.path.join(get_package_share_directory('line_following_robot'), 'worlds', 'track.world')
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')])
+        PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')]),
+        launch_arguments={'gz_args': ['-r ', world], 'on_exit_shutdown': 'true'}.items()
     )
 
     # Initialize node to spawn vehicle in gazebo world using robot_description topic
