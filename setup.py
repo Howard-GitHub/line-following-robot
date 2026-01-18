@@ -26,6 +26,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "line_following_node = line_following_robot.line_follower:main"
         ],
     },
 )
