@@ -30,6 +30,7 @@ def generate_launch_description():
         output='screen'
     )
 
+    # Initialize node to bridge topics listed in bridge.yaml between ROS and Gazebo
     bridge_file = os.path.join(get_package_share_directory('line_following_robot'), 'config', 'bridge.yaml')
     ros_gz_bridge = Node(
         package="ros_gz_bridge",
@@ -41,6 +42,7 @@ def generate_launch_description():
         ]
     )
 
+    # Initialize node to bridge image topic from Gazebo to ROS
     ros_gz_image = Node(
         package="ros_gz_image",
         executable="image_bridge",
