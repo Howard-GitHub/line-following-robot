@@ -28,19 +28,29 @@
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
             <update_rate>15</update_rate>
+
+            <!-- Configure camera settings -->
             <camera>
                 <horizontal_fov>1</horizontal_fov>
+
+                <!-- Configure image appearance -->
                 <image>
                     <format>R8G8B8</format>
                     <width>640</width>
                     <height>480</height>
                 </image>
+
+                <!-- Configure what could be seen in the camera feed -->
                 <clip>
                     <near>0.001</near>
                     <far>10.0</far>
                 </clip>
             </camera>
+
+            <!-- Sets Gazebo topic that publishes image data to ROS -->
             <topic>camera/image_raw</topic>
+
+            <!-- Reference frame of the camera -->
             <gz_frame_id>camera_optical_link</gz_frame_id>
         </sensor>
     </gazebo>
