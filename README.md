@@ -1,4 +1,4 @@
-# Line Following Robot
+# Line-Following Robot
 
 This is a project that utilizes ROS 2 Humble, OpenCV, and Gazebo Fortress Ignition to simulate a vehicle that autonomously follows a black line.
 
