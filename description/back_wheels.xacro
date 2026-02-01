@@ -81,7 +81,7 @@
 
             <max_linear_acceleration>0.4</max_linear_acceleration>
 
-            <!-- Sets the topic that provides information about the behavior of the wheels -->
+            <!-- Sets Gazebo topic that subscribes to a ROS topic sending velocity commands -->
             <topic>cmd_vel</topic>
 
             <!-- Sets the origin point -->
@@ -90,15 +90,16 @@
             <!-- Sets the link that is relative to the origin -->
             <child_frame_id>base_link</child_frame_id>
 
-            <!-- Sets publishing information for odom -->
+            <!-- Configures Gazebo topic that publishes odom data to ROS -->
             <odom_topic>odom</odom_topic>
             <odom_publisher_frequency>30</odom_publisher_frequency>
 
-            <!-- Sets the topic to publish to for transforms -->
+            <!-- Sets Gazebo topic that publishes TF transforms to ROS-->
             <tf_topic>tf</tf_topic>
         </plugin>
 
         <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+            <!-- Configures Gazebo topic that publishes joint states information to ROS -->
             <topic>joint_states</topic>
             <joint_name>left_wheel_joint</joint_name>
             <joint_name>right_wheel_joint</joint_name>
