@@ -1,0 +1,44 @@
+# Line Following Robot
+
+This is a project that utilizes ROS 2 Humble and Gazebo Fortress Ignition to simulate a vehicle that autonomously follows a black line.
+
+## Installation
+
+1. Create a directory for the workspace
+    ```sh
+    mkdir ros2_humble_ws
+    ```
+2. Change directory to the workspace
+    ```sh
+    cd ros2_humble_ws
+    ```
+3. Create src directory
+    ```sh
+    mkdir src
+    ```
+4. Run colcon build in ros2_humble_ws
+    ```sh
+    colcon build
+    ```
+5. Change directory to src
+    ```sh
+    cd src
+    ```
+6. Clone this project
+    ```sh
+    git clone https://github.com/Howard-GitHub/line-following-robot.git
+    ```
+
+
+## Usage
+
+Here are the instructions to get the simulation of the line following robot.
+
+1. Startup the Gazebo application with the vehicle and black line loaded
+    ```sh
+    ros2 launch line_following_robot gz_spawn.launch.py
+    ```
+2. Run the line-following program
+    ```sh
+    ros2 run line_following_robot line_following_node
+    ```
