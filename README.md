@@ -51,3 +51,13 @@ Here are the instructions to run the simulation of the line following robot.
     ```sh
     ros2 run line_following_robot line_following_node
     ```
+
+## Third-Party Asset
+
+### Gazebo world model by KroNton
+
+Source: https://app.gazebosim.org/KroNton/fuel/models/track1 
+
+License: Creative Commons Attribution 4.0 International
+
+Changes: Integrated into a custom simulation world
