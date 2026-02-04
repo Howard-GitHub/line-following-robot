@@ -24,7 +24,7 @@ This is a project that utilizes ROS 2 Humble, OpenCV, and Gazebo Fortress Igniti
     ```sh
     git clone https://github.com/Howard-GitHub/line-following-robot.git
     ```
-6. Change directory back to the root of the workspacce
+6. Change directory back to the root of the workspace
     ```sh
     cd ..
     ```
@@ -34,21 +34,18 @@ This is a project that utilizes ROS 2 Humble, OpenCV, and Gazebo Fortress Igniti
     colcon build
     ```
 
-8. Source setup.bash
-    ```sh
-    source install/setup.bash
-    ```
-
 ## Usage
 
-Here are the instructions to run the simulation of the line following robot.
+Here are the instructions to run the simulation of the line-following robot.
 
 1. Startup the Gazebo application with the vehicle and black line loaded
     ```sh
+    source install/setup.bash
     ros2 launch line_following_robot gz_spawn.launch.py
     ```
-2. Run the line-following program
+2. Run the line-following program on a separate terminal
     ```sh
+    source install/setup.bash
     ros2 run line_following_robot line_following_node
     ```
 
